@@ -1,0 +1,165 @@
+/* General Layout */
+body {
+    margin: 0;
+    background-color: #121212; /* Epic dark mode */
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.epic-navbar {
+    background-color: #18181c;
+    height: 52px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.nav-left, .nav-right { display: flex; align-items: center; }
+
+.epic-logo { font-size: 30px; margin-right: 25px; cursor: pointer; }
+
+.nav-links { display: flex; list-style: none; padding: 0; margin: 0; height: 100%; }
+
+.nav-links li {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links li:hover, .nav-links li.active {
+    color: #fff;
+    border-bottom: 4px solid #0078f2;
+}
+
+.epic-search-box {
+    background: #202020;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.epic-search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    margin-left: 10px;
+    width: 180px;
+}
+
+.nav-util-icon { font-size: 18px; color: #ccc; margin-right: 15px; cursor: pointer; }
+
+.nav-user { display: flex; align-items: center; font-size: 12px; color: #ccc; font-weight: bold; margin-right: 15px; }
+
+.epic-blue-btn {
+    background: #0078f2;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+/* MAIN CONTENT */
+.main-content { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+.title { font-size: 32px; margin-bottom: 5px; }
+.subtitle { color: #888; margin-bottom: 40px; }
+
+/* GRID & CARDS */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.game-card { background: transparent; transition: 0.3s; }
+
+.card-media { position: relative; border-radius: 10px; overflow: hidden; }
+
+.card-media img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+.card-overlay {
+    position: absolute; top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.4); opacity: 0; transition: 0.3s;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.game-card:hover .card-overlay { opacity: 1; }
+
+.overlay-plus { background: #fff; color: #000; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; cursor: pointer; }
+
+.card-body { padding-top: 15px; }
+
+.tag { font-size: 10px; color: #888; font-weight: bold; }
+
+.name { font-size: 16px; margin: 5px 0; font-weight: bold; }
+
+.desc { font-size: 13px; color: #ccc; line-height: 1.4; margin-bottom: 15px; }
+
+.card-actions { display: flex; gap: 8px; }
+
+.btn-get { background: #fff; color: #000; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 11px; }
+
+.btn-edit, .btn-del { background: #2a2a2a; color: #fff; border: none; padding: 6px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; font-weight: bold; }
+
+.btn-del:hover { background: #ff4444; }
+
+/* MODAL */
+.modal-mask {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); display: flex; justify-content: center; align-items: center; z-index: 2000;
+}
+
+.modal-box { background: #18181c; padding: 30px; width: 400px; border-radius: 12px; }
+
+.modal-box label { display: block; margin: 10px 0 5px; color: #888; font-size: 12px; }
+
+.modal-box input, .modal-box textarea {
+    width: 100%; background: #252525; border: 1px solid #333; color: #fff; padding: 10px; border-radius: 4px; margin-bottom: 10px;
+}
+
+.confirm-btn { background: #0078f2; color: #fff; border: none; padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+.cancel-btn { background: transparent; color: #888; border: none; width: 100%; margin-top: 10px; cursor: pointer; }
+
+/* FOOTER */
+.epic-footer { background: #18181c; padding: 60px 0 30px; margin-top: 80px; }
+
+.footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.footer-top { display: flex; justify-content: space-between; margin-bottom: 30px; }
+
+.socials { font-size: 24px; display: flex; gap: 15px; }
+
+.up-btn { background: transparent; border: 1px solid #333; color: white; padding: 10px; cursor: pointer; border-radius: 4px; }
+
+.footer-links { display: flex; gap: 60px; margin-bottom: 40px; }
+
+.link-col h4 { color: #888; font-size: 14px; margin-bottom: 15px; }
+
+.link-col p { font-size: 13px; margin: 8px 0; color: #ccc; cursor: pointer; }
+
+.footer-line { border: 0.5px solid #2a2a2a; margin-bottom: 20px; }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #888; }
